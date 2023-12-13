@@ -7,7 +7,7 @@ Made in Angular 15 and libs works in same framework version, didn't test that wi
 Import the `ProductCardData` into your app module
 
 ```javascript
-import { ProductCardComponent } from "matzap-product-card-component";
+import { ProductCardComponent } from "matzap-product-card-component-angular";
 ```
 
 ```javascript
@@ -34,7 +34,7 @@ You can pass own properties
 To prepare data use model
 
 ```javascript
-import { ProductCardData } from "matzap-product-card-component";
+import { ProductCardData } from "matzap-product-card-component-angular";
 
 export interface ProductCardData {
   title: string;

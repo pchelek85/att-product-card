@@ -1,6 +1,6 @@
 {
-  "name": "matzap-product-card-component",
-  "version": "0.0.6",
+  "name": "matzap-product-card-component-angular",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
