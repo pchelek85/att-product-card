@@ -45,4 +45,4 @@ export interface ProductCardData {
 }
 ```
 
-imageURL and imageAlt should be string type
+imageURL and imageAlt should be `string` type

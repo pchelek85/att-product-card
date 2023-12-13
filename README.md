@@ -1,27 +1,68 @@
-# ProductCard
+# Build and publish
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+use command
 
-## Development server
+```javascript
+ng build product-card
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+then go to `dist/product-card` and use command
 
-## Code scaffolding
+```javascript
+npm pack
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+then
 
-## Build
+```javascript
+npm publish
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Readme
 
-## Running unit tests
+Made in Angular 15 and libs works in same framework version, didn't test that with vanilla JS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage Example
 
-## Running end-to-end tests
+Import the `ProductCardData` into your app module
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```javascript
+import { ProductCardComponent } from "matzap-product-card-component";
+```
 
-## Further help
+```javascript
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, ProductCardComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+No you can use component directive
+
+```javascript
+<app-product-card></app-product-card>
+```
+
+You can pass own properties
+
+```javascript
+<app-product-card [data]="cardData" [imageURL]="imageURL" [imageAlt]="imageAlt"></app-product-card>
+```
+
+To prepare data use model
+
+```javascript
+import { ProductCardData } from "matzap-product-card-component";
+
+export interface ProductCardData {
+  title: string;
+  description: string;
+  primaryInput: string;
+  secondaryInput: string;
+  actionName: string;
+}
+```
+
+imageURL and imageAlt should be `string` type
